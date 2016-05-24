@@ -39,3 +39,16 @@ switch (randomBg) {
    break;
    default: document.write("<style>header{background: url('/images/05.png')}</style>");
 }
+
+var randomTitle = Math.round( Math.random() * 4 );
+switch (randomTitle) {
+   case 0: document.getElementById("random").innerHTML="谈笑风生";
+   break;
+   case 1: document.getElementById("random").innerHTML="谈笑风生1";
+   break;
+   case 2: document.getElementById("random").innerHTML="谈笑风生2";
+   break;
+   case 3: document.getElementById("random").innerHTML="谈笑风生3";
+   break;
+   default: document.getElementById("random").innerHTML="谈笑风生4";
+}
