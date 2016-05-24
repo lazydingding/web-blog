@@ -1,0 +1,32 @@
+<%- include header.html %>
+   <div class="article">
+      <hr />
+      <!-- make a border for the post content -->
+      <div class="panel panel-default">
+         <h2><a href="/p/<%= post._id %>"><%= post.title %></a></h2>
+            <p class="index-info">
+               blogger：<a href="/u/<%= post.name %>"><%= post.name %></a> |
+               date：<%= post.time.minute %> |
+               tags：<% post.tags.forEach(function (tag, index) { %>
+                  <% if (tag) { %>
+                     <a class="tag" href="/tags/<%= tag %>"><%= tag %></a>
+                  <% } %>
+               <% }) %>
+            </p>
+            <div class="index-post">
+               <p><%- post.post %></p>
+            </div>
+            <p class="index-info">Views：<%= post.pv %> |
+            Comments：<%= post.comments.length %></p>
+         </div>
+         <!-- if the user is the blogger, display the button to edit and delete -->
+         <% if (user && (user.name == post.name)) { %>
+            <div class="button">
+               <input type="button" class="btn btn-warning" value="Edit" onclick="location='/edit/<%= post._id %>'" />
+               <input type="button" class="btn btn-danger" value="Delete" onclick="location='/remove/<%= post._id %>'" />
+            </div>
+         <% } %>
+      </div>
+   <hr />
+   <%- include comment.html %>
+<%- include footer.html %>
