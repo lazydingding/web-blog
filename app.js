@@ -18,6 +18,7 @@ var settings = require('./settings');
 
 var app = express();
 
+app.set('port', (process.env.PORT || 5000));
 // here I used ejs as the template engine
 app.set('views', path.join(__dirname, 'views'));
 // change the view engine from ejs to html
