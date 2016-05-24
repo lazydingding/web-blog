@@ -3,7 +3,8 @@
 			   <div class="panel-heading">
 					<a class="panel-title" data-toggle="collapse" href="#<%= post._id %>">
                   "<strong><%= post.title %></strong>"
-               <small><i>posted by</i></small> <strong><%= post.name %></strong></a>
+               <small><i>posted by</i></small> <strong><%= post.name %></strong>
+               <small>(click to flod)</small></a>
 				</div>
                <!-- the first 3 are automatic opened -->
                <% if ( num < 3) { %>
@@ -29,7 +30,7 @@
                         </p>
                      </div>
                      <p class="index-info">Views：<%= post.pv %> |
-                     Comments：<%= post.comments.length %></p>
+                     <a href="/p/<%= post._id %>">Comments</a>：<%= post.comments.length %></p>
 					</div>
 				</div>
          </div>
