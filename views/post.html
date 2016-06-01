@@ -1,0 +1,34 @@
+<%- include header.html %>
+<!-- HTML5 Form Validation -->
+<div class="post">
+	<form class="form-horizontal" role="form" method="post">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Title</label>
+			<div class="col-sm-9">
+				<!-- max length for title is 70 -->
+				<input type="text" class="form-control" name="title" maxLength="70" required />
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Tag</label>
+			<div class="col-sm-3">
+				<!-- max length for title is 15 -->
+				<input type="text" class="form-control" name="tag1" maxLength="15" required />
+			</div>
+         <div class="col-sm-3">
+            <input type="text" class="form-control" name="tag2" maxLength="15" />
+         </div>
+         <div class="col-sm-3">
+            <input type="text" class="form-control" name="tag3" maxLength="15" />
+         </div>
+		</div>
+		<!-- KindEditor for post, the image upload function is supproted -->
+      <div class = "textarea">
+          <textarea name="post"></textarea>
+      </div>
+		<div class="button">
+			<button type="submit" class="btn btn-success" >Post</button>
+		</div>
+	</form>
+</div>
+<%- include footer.html %>

@@ -1,0 +1,37 @@
+<%- include header.html %>
+<!-- HTML5 Form Validation -->
+<div class="login">
+	<form class="form-horizontal" role="form" method="post">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Username</label>
+			<div class="col-sm-10">
+				<!-- max length of username is 12, it should only contains 1-9, a-z and _ -->
+				<input type="text" class="form-control" pattern="^\w+$" maxLength="12" name="name" required />
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Password</label>
+			<div class="col-sm-10">
+				<input type="password" class="form-control" name="password" required />
+			</div>
+		</div>
+      <div class="form-group">
+         <label class="col-sm-2 control-label">Password-Repeat</label>
+         <div class="col-sm-10">
+            <input type="password" class="form-control" name="password-repeat" required />
+         </div>
+      </div>
+      <div class="form-group">
+         <label class="col-sm-2 control-label">E-mail</label>
+         <div class="col-sm-10">
+            <input type="email" class="form-control" name="email" required />
+         </div>
+      </div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-success" >Register</button>
+			</div>
+		</div>
+	</form>
+</div>
+<%- include footer.html %>

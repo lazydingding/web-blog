@@ -1,0 +1,32 @@
+<%- include header.html %>
+<!-- the edit page is quit same as post page -->
+<!-- the main difference is that the title and tag cannot be changed -->
+   <div class="post">
+   	<form class="form-horizontal" role="form" method="post">
+   		<div class="form-group">
+   			<label class="col-sm-2 control-label">Title</label>
+   			<div class="col-sm-9">
+   				<input type="text" class="form-control" name="title" value="<%= post.title %>" disabled="disabled" />
+   			</div>
+   		</div>
+   		<div class="form-group">
+   			<label class="col-sm-2 control-label">Tag</label>
+   			<div class="col-sm-3">
+   				<input type="text" class="form-control" name="tag1" value="<%= post.tags[0] %>" disabled="disabled" />
+   			</div>
+            <div class="col-sm-3">
+               <input type="text" class="form-control" name="tag2" value="<%= post.tags[1] %>" disabled="disabled" />
+            </div>
+            <div class="col-sm-3">
+               <input type="text" class="form-control" name="tag3" value="<%= post.tags[2] %>" disabled="disabled" />
+            </div>
+   		</div>
+         <div class = "textarea">
+             <textarea name="post"><%= post.post %></textarea>
+         </div>
+   		<div class="button">
+   			<button type="submit" class="btn btn-success" >Save</button>
+   		</div>
+   	</form>
+   </div>
+<%- include footer.html %>

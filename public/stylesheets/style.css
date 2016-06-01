@@ -1,0 +1,157 @@
+/* the following five pieces of code make the footer on the bottom always */
+html, body {
+  height: 100%;
+}
+
+body a{
+   text-decoration:none !important;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:155px; /* this needs to be bigger than footer height*/
+}
+
+.footer {
+   text-align: center;
+   position: relative;
+   margin-top: -155px; /* negative value of footer height */
+   height: 155px;
+   clear:both;
+   padding-top:20px;
+}
+
+/* make the images uploaded by users responsive */
+body img {
+   max-width: 100%;
+}
+
+/* make the title on the centre always */
+h1, h2, h3, h4 {
+   text-align: center;
+}
+
+/* the bolder hr line */
+.hr0 {
+   height:1px;
+   border:none;
+   border-top:3px dashed rgb(200,200,200);
+}
+
+/* set up the style of header */
+header {
+   color: white;
+   text-align: center;
+   margin-top: 50px;
+   margin-bottom: 10px;
+   padding: 100px 0 50px;
+   background-size: cover !important;
+}
+
+/* right margin of the navigation bar */
+.header-margin {
+   margin-right: 15px;
+}
+
+/* width of body div */
+.index, .article, .header-info, .textarea, .button {
+   width: 90%;
+   margin: auto;
+}
+
+/* width of body div */
+.login, .post, .archive, .tags {
+   width: 80%;
+   margin: auto;
+}
+
+/* info such as blogger and date should be in the centre */
+.index-info {
+   text-align: center;
+}
+
+/* the style of post content */
+.index-post {
+   font-size: 1.1em;
+   margin: auto;
+   width: 90%;
+}
+
+/* the style of tag, set it as pure red */
+.tag{
+   background-color: rgb(255,0,0);
+   border-radius:0.2em;
+   font-size:1em;
+   color: rgb(255,255,255);
+   display:inline-block;
+   padding:0 0.5em;
+}
+
+.tag:hover{
+   text-decoration:none;
+   background-color: rgb(255,255,255);
+   color: rgb(0,0,0);
+   -webkit-transition:color .2s linear;
+}
+
+.archive {
+   line-height: 1em;
+}
+
+.archive time {
+   color: rgb(155,155,155);
+   margin-right:1em;
+}
+
+/* the style of tag in tags page, set it bigger */
+.tags .tag {
+   font-size:2em !important;
+   margin-bottom:10px;
+}
+
+.button {
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+.post button {
+   width:100%;
+}
+
+.article .button {
+   width:90%;
+}
+
+.comment {
+   width: 80%;
+   margin: auto;
+}
+
+.comment h4{
+   text-align: left;
+}
+
+.comment blockquote {
+   width: 80%;
+}
+
+.comment blockquote p {
+   margin-left: 10px;
+}
+
+/* responsive style for page-width less than 768px */
+@media screen and (max-width: 768px) {
+   .archive, .textarea, .button, .comment, .index-post {
+      width: 100% !important;
+   }
+   .post, .index, .article, .comment {
+      width: 95% !important;
+   }
+   .comment blockquote {
+      width: 90% !important;
+   }
+}

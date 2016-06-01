@@ -1,0 +1,20 @@
+<%- include header.html %>
+   <div class="archive">
+      <!-- show same year as title once -->
+      <% var lastYear = 0 %>
+      <% posts.forEach(function (post, index) { %>
+         <% if (lastYear != post.time.year) { %>
+            <h3><%= post.time.year %></h3>
+         <% lastYear=post.time.year } %>
+		   <div class="col-md-8 column">
+			   <p>
+               <time><%= post.time.day %></time> Title:
+               <a href="/p/<%= post._id %>"><%= post.title %></a>
+            </p>
+		   </div>
+		   <div class="col-md-4 column">
+            <p>Posted By: <a href="/u/<%= post.name %>"><%= post.name %></a></p>
+		   </div>
+      <% }) %>
+   </div>
+<%- include footer.html %>

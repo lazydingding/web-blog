@@ -1,0 +1,44 @@
+<br />
+<div class="comment">
+   <h4>Comment</h4>
+   <hr class="hr0"/>
+   <!-- display all the comments exist -->
+   <% post.comments.forEach(function (comment, index) { %>
+   	<blockquote>
+         <small><%= comment.name %> (<%= comment.email %>) at <%= comment.time %></small>
+   		<p><%- comment.content %></p>
+   	</blockquote>
+      <hr class="hr0"/>
+   <% }) %>
+
+   <!-- the form to make a comment -->
+	<form class="form-horizontal" role="form" method="post" action="/p/<%= post._id %>">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">User</label>
+			<div class="col-sm-6">
+            <% if (user) { %>
+				<input type="text" class="form-control" name="name" pattern="^\w+$" maxLength="12" value="<%= user.name %>" required />
+            <% } else { %>
+               <input type="text" class="form-control" name="name" pattern="^\w+$" maxLength="12" required />
+         <% } %>
+			</div>
+		</div>
+      <div class="form-group">
+			<label class="col-sm-2 control-label">E-mail</label>
+			<div class="col-sm-6">
+            <% if (user) { %>
+				<input type="email" class="form-control" name="email" value="<%= user.email %>" required />
+            <% } else { %>
+            <input type="email" class="form-control" name="email" required />
+         <% } %>
+			</div>
+		</div>
+      <!-- mini KindEditor for make comment, the image upload function has been blocked -->
+      <div class = "textarea">
+          <textarea name="content"></textarea>
+      </div>
+		<div class="button">
+			<button type="submit" class="btn btn-default" >Comment</button>
+		</div>
+	</form>
+</div>

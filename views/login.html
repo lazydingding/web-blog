@@ -1,0 +1,25 @@
+<%- include header.html %>
+<div class="login">
+	<!-- HTML5 Form Validation -->
+	<form class="form-horizontal" role="form" method="post">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Username</label>
+				<div class="col-sm-10">
+					<!-- max length of username is 12 -->
+					<input type="text" class="form-control" maxLength="12" name="name" required />
+				</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Password</label>
+			<div class="col-sm-10">
+				<input type="password" class="form-control" name="password" required />
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-success" >Log in</button>
+			</div>
+		</div>
+	</form>
+</div>
+<%- include footer.html %>
