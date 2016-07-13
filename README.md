@@ -21,7 +21,7 @@ Express [应用生成器](http://www.expressjs.com.cn/starter/generator.html)
 ### 启动MongoDB数据库
 * 下载MongoDB，[下载链接](https://www.mongodb.com/download-center#community)
 * 解压缩下载包，重命名文件夹为mongodb
-* 启动终端(命令提示符)，输入
+* 启动终端(命令提示符)，输入:
 ```
 $ cd mongodb
 $ mkdir blog
@@ -29,7 +29,7 @@ $ cd bin
 $ ./mongod --dbpath ../blog/
 ```
 ### 运行server
-* 启动另一个终端(命令提示符)，输入
+* 启动另一个终端(命令提示符)，输入:
 ```
 $ cd source
 $ npm install
