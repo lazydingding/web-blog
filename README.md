@@ -1,7 +1,7 @@
 # web-blog
 多人博客网站, Node.js(Express) + MongoDb + Bootstrap
 
-**已部署到Heroku**, [点击浏览](http://lazydingding.herokuapp.com/)
+已部署到Heroku, [点击浏览](http://lazydingding.herokuapp.com/)
 
 ## 文件简介
 * source: 程序源代码
@@ -17,7 +17,7 @@
 ## 程序框架
 Express [应用生成器](http://www.expressjs.com.cn/starter/generator.html)
 
-## 如何运行
+## 如何本地运行
 ### 启动MongoDB数据库
 * 下载MongoDB，[下载链接](https://www.mongodb.com/download-center#community)
 * 解压缩下载包，重命名文件夹为mongodb
