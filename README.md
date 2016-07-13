@@ -1,6 +1,7 @@
 # web-blog
 多人博客网站, Node.js(Express) + MongoDb + Bootstrap
-已部署到Heroku, [点击浏览](http://lazydingding.herokuapp.com/)
+
+**已部署到Heroku**, [点击浏览](http://lazydingding.herokuapp.com/)
 
 ## 文件简介
 * source: 程序源代码
